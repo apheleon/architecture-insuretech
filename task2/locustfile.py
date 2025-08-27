@@ -8,7 +8,3 @@ class WebsiteUser(HttpUser):
     @task
     def index(self):
         self.client.get("/")
-    
-    @task(2)
-    def metrics(self):
-        self.client.get("/metrics")
